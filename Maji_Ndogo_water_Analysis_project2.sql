@@ -7,12 +7,6 @@ CREATE TABLE IF NOT EXISTS sql_integrated_project2 (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert some answers
-INSERT INTO sql_integrated_project2 (question, answer) VALUES 
-('What is SQL?', 'SQL stands for Structured Query Language.'),
-('What is a primary key?', 'A primary key uniquely identifies each record in a table.');
-
-USE md_water_services;
 -- Which SQL query will produce the date format "DD Month YYYY" from the time_of_record column in the visits table, as a single column? Note: Monthname() acts in a similar way to DAYNAME().
 SELECT CONCAT(day(time_of_record), " ", monthname(time_of_record), " ", year(time_of_record)) FROM visits; 
 
